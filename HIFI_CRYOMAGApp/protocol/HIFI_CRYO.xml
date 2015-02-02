@@ -6,7 +6,7 @@
   <!--Definition of a configSection, the second argument of the IOC lvDCOMConfigure() command -->
   <section name="frontpanel">
     <!--TODO: edit path attribute in <vi /> to contain a full absolute path, you can also use any EPICS macro known to the IOC e.g. $(TOP) -->
-    <vi path="C:/Labview Modules/Instruments/HIFI/Cryomag/Client Side/HIFI - Cryomag.llb/HIFI - Cryomag - Front Panel.vi">
+    <vi path="C:/Labview Modules/Instruments/HIFI/Cryomag/Client Side/HIFI - Cryomag.llb/HIFI - Cryomag - Front Panel - DS and EI.vi">
       <!--The <param /> maps an asyn driver parameter "name" (referenced in the EPICS .db) to the LabVIEW item "target" -->
       <!--TODO: set extint="true" for controls that need LabVIEW events triggering when they are written to -->
       <param name="MAIN:OUT" type="float64">
@@ -32,7 +32,6 @@
         <items>
           <item name="Set" value="0"/>
         </items>
-        <read method="GCV" target="MAIN Set"/>
         <set method="SCV" extint="true" target="MAIN Set"/>
       </param>
       <param name="X:OUT" type="float64">
@@ -55,7 +54,6 @@
         <items>
           <item name="Set" value="0"/>
         </items>
-        <read method="GCV" target="X Set"/>
         <set method="SCV" extint="true" target="X Set"/>
       </param>
       <param name="Y:ERRORS" type="string">
@@ -72,14 +70,12 @@
         <items>
           <item name="Set" value="0"/>
         </items>
-        <read method="GCV" target="Y Set"/>
         <set method="SCV" extint="true" target="Y Set"/>
       </param>
       <param name="Y:OUT" type="float64">
         <read method="GCV" target="Y Output"/>
       </param>
       <param name="Y:TARGET" type="float64">
-        <read method="GCV" target="Y Target"/>
         <set method="SCV" extint="true" target="Y Target"/>
       </param>
       <param name="Z:ERRORS" type="string">
@@ -96,14 +92,12 @@
         <items>
           <item name="Set" value="0"/>
         </items>
-        <read method="GCV" target="Z Set"/>
         <set method="SCV" extint="true" target="Z Set"/>
       </param>
       <param name="Z:OUT" type="float64">
         <read method="GCV" target="Z Output"/>
       </param>
       <param name="Z:TARGET" type="float64">
-        <read method="GCV" target="Z Target"/>
         <set method="SCV" extint="true" target="Z Target"/>
       </param>
       <param name="OPMODE" type="ring">
@@ -114,6 +108,15 @@
           <item name="Idle" value="3"/>
         </items>
         <set method="SCV" extint="true" target="Operation Mode 1"/>
+      </param>
+	  <param name="OPMODE:IND" type="ring">
+        <items>
+          <item name="High Field Mode" value="0"/>
+          <item name="Low Field Mode" value="1"/>
+          <item name="Z Switching Mode" value="2"/>
+          <item name="Idle" value="3"/>
+        </items>
+        <read method="GCV" target="Operation Mode Ind"/>
       </param>
       <param name="HALL:SENS1" type="float64">
         <read method="GCV" target="Hall Sensor 1"/>

@@ -23,7 +23,7 @@ HIFI_CRYOMAG_registerRecordDeviceDriver pdbbase
 < $(IOCSTARTUP)/dbload.cmd
 
 lvDCOMConfigure("lvfp", "frontpanel", "$(TOP)/HIFI_CRYOMAGApp/protocol/HIFI_CRYO.xml", "$(LVDCOMHOST=localhost)", 6, "", "", "")
-dbLoadRecords("$(TOP)/Db/HIFI_CRYOMAG.db","P=$(MYPVPREFIX)HIFI:CRYO:")
+dbLoadRecords("$(TOP)/Db/HIFI_CRYOMAG.db","P=$(MYPVPREFIX)CRYO:")
 
 ## Load our record instances
 #dbLoadRecords("db/xxx.db","user=kvlb23Host")

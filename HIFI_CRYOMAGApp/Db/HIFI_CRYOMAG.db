@@ -31,7 +31,7 @@ record(stringin, "$(P)MESSAGE:RBV")
 }
 
 # Read LabVIEW control/indicator "MAIN Status" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(stringin, "$(P)MAIN:STATUS:RBV")
+record(stringin, "$(P)MAIN:STAT:RBV")
 {
 	field(DESC, "LabVIEW 'MAIN Status'")
     field(DTYP, "asynOctetRead")
@@ -46,8 +46,8 @@ record(bi, "$(P)MAIN:READY:RBV")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)MAIN:READY")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Wait")
+    field(ONAM, "Ready")
 }
 
 # Read LabVIEW control/indicator "MAIN Errors" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
@@ -59,16 +59,6 @@ record(stringin, "$(P)MAIN:ERRORS:RBV")
     field(SCAN, ".1 second")
 }
 
-# Read LabVIEW control/indicator "MAIN Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-###record(ai, "$(P)MAIN:TARGET:RBV")
-###{
-###	field(DESC, "LabVIEW 'MAIN Target'")
-###    field(DTYP, "asynFloat64")
-###    field(INP,  "@asyn(lvfp,0,0)MAIN_TARGET")
-###    field(PREC, "3")
-###    field(SCAN, ".1 second")
-###}
-
 # Write to LabVIEW control "MAIN Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
 record(ao, "$(P)MAIN:TARGET")
 {
@@ -78,17 +68,6 @@ record(ao, "$(P)MAIN:TARGET")
     field(PREC, "3")
 }
 
-
-# Read LabVIEW control/indicator "MAIN Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)MAIN:SET:RBV")
-{
-	field(DESC, "LabVIEW 'MAIN Set'")
-    field(DTYP, "asynInt32")
-    field(INP,  "@asyn(lvfp,0,0)MAIN:SET")
-    field(SCAN, ".1 second")
-    field(ZNAM, "Set")
-    field(ONAM, "")
-}
 
 # Write to LabVIEW control "MAIN Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
 record(bo, "$(P)MAIN:SET")
@@ -112,7 +91,7 @@ record(ai, "$(P)X:OUT:RBV")
 }
 
 # Read LabVIEW control/indicator "X Status" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(stringin, "$(P)X:STATUS:RBV")
+record(stringin, "$(P)X:STAT:RBV")
 {
 	field(DESC, "LabVIEW 'X Status'")
     field(DTYP, "asynOctetRead")
@@ -127,8 +106,8 @@ record(bi, "$(P)X:READY:RBV")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)X:READY")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Wait")
+    field(ONAM, "Ready")
 }
 
 # Read LabVIEW control/indicator "X Errors" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
@@ -140,16 +119,6 @@ record(stringin, "$(P)X:ERRORS:RBV")
     field(SCAN, ".1 second")
 }
 
-# Read LabVIEW control/indicator "X Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-###record(ai, "$(P)X:TARGET:RBV")
-###{
-###	field(DESC, "LabVIEW 'X Target'")
-###    field(DTYP, "asynFloat64")
-###    field(INP,  "@asyn(lvfp,0,0)X:TARGET")
-###    field(PREC, "3")
-###    field(SCAN, ".1 second")
-###}
-
 # Write to LabVIEW control "X Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
 record(ao, "$(P)X:TARGET")
 {
@@ -159,17 +128,6 @@ record(ao, "$(P)X:TARGET")
     field(PREC, "3")
 }
 
-
-# Read LabVIEW control/indicator "X Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)X:SET:RBV")
-{
-	field(DESC, "LabVIEW 'X Set'")
-    field(DTYP, "asynInt32")
-    field(INP,  "@asyn(lvfp,0,0)X:SET")
-    field(SCAN, ".1 second")
-    field(ZNAM, "Set")
-    field(ONAM, "")
-}
 
 # Write to LabVIEW control "X Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
 record(bo, "$(P)X:SET")
@@ -198,29 +156,17 @@ record(bi, "$(P)Y:READY:RBV")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)Y:READY")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Wait")
+    field(ONAM, "Ready")
 }
 
 # Read LabVIEW control/indicator "Y Status" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(stringin, "$(P)Y:STATUS:RBV")
+record(stringin, "$(P)Y:STAT:RBV")
 {
 	field(DESC, "LabVIEW 'Y Status'")
     field(DTYP, "asynOctetRead")
     field(INP,  "@asyn(lvfp,0,0)Y:STATUS")
     field(SCAN, ".1 second")
-}
-
-
-# Read LabVIEW control/indicator "Y Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)Y:SET:RBV")
-{
-	field(DESC, "LabVIEW 'Y Set'")
-    field(DTYP, "asynInt32")
-    field(INP,  "@asyn(lvfp,0,0)Y:SET")
-    field(SCAN, ".1 second")
-    field(ZNAM, "Set")
-    field(ONAM, "")
 }
 
 # Write to LabVIEW control "Y Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
@@ -240,16 +186,6 @@ record(ai, "$(P)Y:OUT:RBV")
 	field(DESC, "LabVIEW 'Y Output'")
     field(DTYP, "asynFloat64")
     field(INP,  "@asyn(lvfp,0,0)Y:OUT")
-    field(PREC, "3")
-    field(SCAN, ".1 second")
-}
-
-# Read LabVIEW control/indicator "Y Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(ai, "$(P)Y:TARGET:RBV")
-{
-	field(DESC, "LabVIEW 'Y Target'")
-    field(DTYP, "asynFloat64")
-    field(INP,  "@asyn(lvfp,0,0)Y:TARGET")
     field(PREC, "3")
     field(SCAN, ".1 second")
 }
@@ -280,28 +216,17 @@ record(bi, "$(P)Z:READY:RBV")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)Z:READY")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Wait")
+    field(ONAM, "Ready")
 }
 
 # Read LabVIEW control/indicator "Z Status" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(stringin, "$(P)Z:STATUS:RBV")
+record(stringin, "$(P)Z:STAT:RBV")
 {
 	field(DESC, "LabVIEW 'Z Status'")
     field(DTYP, "asynOctetRead")
     field(INP,  "@asyn(lvfp,0,0)Z:STATUS")
     field(SCAN, ".1 second")
-}
-
-# Read LabVIEW control/indicator "Z Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)Z:SET:RBV")
-{
-	field(DESC, "LabVIEW 'Z Set'")
-    field(DTYP, "asynInt32")
-    field(INP,  "@asyn(lvfp,0,0)Z:SET")
-    field(SCAN, ".1 second")
-    field(ZNAM, "Set")
-    field(ONAM, "")
 }
 
 # Write to LabVIEW control "Z Set" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
@@ -325,16 +250,6 @@ record(ai, "$(P)Z:OUT:RBV")
     field(SCAN, ".1 second")
 }
 
-# Read LabVIEW control/indicator "Z Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(ai, "$(P)Z:TARGET:RBV")
-{
-	field(DESC, "LabVIEW 'Z Target'")
-    field(DTYP, "asynFloat64")
-    field(INP,  "@asyn(lvfp,0,0)Z:TARGET")
-    field(PREC, "3")
-    field(SCAN, ".1 second")
-}
-
 # Write to LabVIEW control "Z Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
 record(ao, "$(P)Z:TARGET")
 {
@@ -344,35 +259,34 @@ record(ao, "$(P)Z:TARGET")
     field(PREC, "3")
 }
 
-
-# Read LabVIEW control/indicator "Operation Mode" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-# record(mbbi, "$(P)OPMODE:RBV")
-# {
-	# field(DESC, "LabVIEW 'Operation Mode'")
-    # field(DTYP, "asynInt32")
-    # field(INP,  "@asyn(lvfp,0,0)OPMODE")
-    # field(SCAN, ".1 second")
-
-    # field(ZRVL, 0)
-    # field(ZRST, "High Field Mode")
-        
-    # field(ONVL, 1)
-    # field(ONST, "Low Field Mode")
-        
-    # field(TWVL, 2)
-    # field(TWST, "Z Switching Mode")
-        
-    # field(THVL, 3)
-    # field(THST, "Idle")
-        
-# }
-
 # Write to LabVIEW control "Operation Mode" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
 record(mbbo, "$(P)OPMODE")
 {
 	field(DESC, "LabVIEW 'Operation Mode'")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn(lvfp,0,0)OPMODE")
+
+    field(ZRVL, 0)
+    field(ZRST, "High Field Mode")
+        
+    field(ONVL, 1)
+    field(ONST, "Low Field Mode")
+        
+    field(TWVL, 2)
+    field(TWST, "Z Switching Mode")
+        
+    field(THVL, 3)
+    field(THST, "Idle")
+        
+}
+
+# Read from LabVIEW control "Operation Mode Initial" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
+record(mbbi, "$(P)OPMODE:RBV")
+{
+	field(DESC, "LabVIEW 'Operation Mode Ind'")
+    field(DTYP, "asynInt32")
+	field(SCAN, ".1 second")
+    field(INP,  "@asyn(lvfp,0,0)OPMODE:IND")
 
     field(ZRVL, 0)
     field(ZRST, "High Field Mode")
@@ -404,13 +318,13 @@ record(ai, "$(P)HALL:SENS2:RBV")
 {
 	field(DESC, "LabVIEW 'Hall Sensor 2'")
     field(DTYP, "asynFloat64")
-    field(INP,  "@asyn(lvfp,0,0)HALL:SENS:2")
+    field(INP,  "@asyn(lvfp,0,0)HALL:SENS2")
     field(PREC, "3")
     field(SCAN, ".1 second")
 }
 
 # Read LabVIEW control/indicator "Min to Target" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(ai, "$(P)MAIN:TARGET:MINTO:RBV")
+record(ai, "$(P)MAIN:MINTO:RBV")
 {
 	field(DESC, "LabVIEW 'Min to Target'")
     field(DTYP, "asynFloat64")
@@ -420,29 +334,29 @@ record(ai, "$(P)MAIN:TARGET:MINTO:RBV")
 }
 
 # Read LabVIEW control/indicator "Left ON/OFF" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)COMP:LEFT:ON:RBV")
+record(bi, "$(P)COMP:L:ON:RBV")
 {
 	field(DESC, "LabVIEW 'Left ON/OFF'")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)COMP:LEFT:ON")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
 }
 
 # Read LabVIEW control/indicator "Left Error LED" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)COMP:LEFT:ERROR:STATUS:RBV")
+record(bi, "$(P)COMP:L:ERROR:STAT:RBV")
 {
 	field(DESC, "LabVIEW 'Left Error LED'")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)COMP:LEFT:ERROR:STATUS")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Error")
+    field(ONAM, "No Error")
 }
 
 # Read LabVIEW control/indicator "Left Compressor Error Text" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(stringin, "$(P)COMP:LEFT:ERROR:TEXT:RBV")
+record(stringin, "$(P)COMP:L:ERROR:TEXT:RBV")
 {
 	field(DESC, "LabVIEW 'Left Compressor Error Text'")
     field(DTYP, "asynOctetRead")
@@ -451,29 +365,29 @@ record(stringin, "$(P)COMP:LEFT:ERROR:TEXT:RBV")
 }
 
 # Read LabVIEW control/indicator "Right ON/OFF" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)COMP:RIGHT:ON:RBV")
+record(bi, "$(P)COMP:R:ON:RBV")
 {
 	field(DESC, "LabVIEW 'Right ON/OFF'")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)COMP:RIGHT:ON")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
 }
 
 # Read LabVIEW control/indicator "Right Error LED" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(bi, "$(P)COMP:RIGHT:ERROR:STATUS:RBV")
+record(bi, "$(P)COMP:R:ERROR:STAT:RBV")
 {
 	field(DESC, "LabVIEW 'Right Error LED'")
     field(DTYP, "asynInt32")
     field(INP,  "@asyn(lvfp,0,0)COMP:RIGHT:ERROR:STATUS")
     field(SCAN, ".1 second")
-    field(ZNAM, "")
-    field(ONAM, "")
+    field(ZNAM, "Error")
+    field(ONAM, "No Error")
 }
 
 # Read LabVIEW control/indicator "Right Compressor Error Text" on "C:\Labview Modules\Instruments\HIFI\Cryomag\Client Side\HIFI - Cryomag.llb\HIFI - Cryomag - Front Panel.vi"
-record(stringin, "$(P)COMP:RIGHT:ERROR:TEXT:RBV")
+record(stringin, "$(P)COMP:R:ERROR:TEXT:RBV")
 {
 	field(DESC, "LabVIEW 'Right Compressor Error Text'")
     field(DTYP, "asynOctetRead")
